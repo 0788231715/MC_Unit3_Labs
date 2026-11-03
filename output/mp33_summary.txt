@@ -1,0 +1,9 @@
+Single run (seed 2)
+Naive: {'handovers': 6, 'ho_fail': 0, 'rlf': 0, 'ping_pong': 3, 'connected_pct': 98.61111111111111}
+Hyst 3 dB + TTT 5: {'handovers': 2, 'ho_fail': 0, 'rlf': 0, 'ping_pong': 0, 'connected_pct': 98.61111111111111}
+Hyst 10 dB + TTT 12: {'handovers': 1, 'ho_fail': 0, 'rlf': 1, 'ping_pong': 0, 'connected_pct': 95.0}
+
+Monte-Carlo 300 runs
+Naive: {'handovers': 10.776666666666667, 'ho_fail': 0.19666666666666666, 'rlf': 0.04, 'ping_pong': 7.403333333333333, 'connected_pct': 98.00370370370369}
+Hyst 3 dB + TTT 5: {'handovers': 1.7833333333333334, 'ho_fail': 0.0033333333333333335, 'rlf': 0.26666666666666666, 'ping_pong': 0.0, 'connected_pct': 97.91851851851851}
+Hyst 10 dB + TTT 12: {'handovers': 0.45666666666666667, 'ho_fail': 0.0, 'rlf': 1.56, 'ping_pong': 0.0, 'connected_pct': 94.39444444444445}

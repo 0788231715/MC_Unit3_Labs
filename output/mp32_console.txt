@@ -1,0 +1,26 @@
+CONFIGURATION: {'total_spectrum_hz': 25000000.0, 'channel_bw_hz': 200000.0, 'slots_per_channel': 8, 'coverage_area_km2': 1000.0, 'cell_radius_km': 5.0, 'candidate_N': [1, 3, 4, 7, 9, 12], 'path_loss_exp': 4.0}
+
+Total channels = 25 MHz / 200 kHz = 125
+Hex cell area (R=5.0 km) = 64.95 km2 -> 15.4 cells fit in 1000 km2
+
+  N  ch/cell   cells  capacity(ch)  users(x8)      Q  SIR dB
+  1      125    15.4          1925      15396   1.73     1.8
+  3       41    15.4           631       5050   3.00    11.3
+  4       31    15.4           477       3818   3.46    13.8
+  7       17    15.4           262       2094   4.58    18.7
+  9       13    15.4           200       1601   5.20    20.8
+ 12       10    15.4           154       1232   6.00    23.3
+
+Cell splitting (N=7):
+  R=5.00 km  cells=15  capacity=262 ch  gain x1.0  Tx power change -0 dB
+  R=2.50 km  cells=62  capacity=1047 ch  gain x4.0  Tx power change -12 dB
+  R=1.25 km  cells=246  capacity=4188 ch  gain x16.0  Tx power change -24 dB
+
+Sectoring (SIR = Q^n / i0, n=4):
+  Omni, N=7      ch/cell= 17  Q=4.58  SIR=18.7 dB  capacity=262
+  Omni, N=4      ch/cell= 31  Q=3.46  SIR=13.8 dB  capacity=477
+  3-sector, N=4  ch/cell= 31  Q=3.46  SIR=18.6 dB  capacity=477
+  3-sector, N=3  ch/cell= 41  Q=3.00  SIR=16.1 dB  capacity=631
+  6-sector, N=3  ch/cell= 41  Q=3.00  SIR=19.1 dB  capacity=631
+
+Charts written to ../figures

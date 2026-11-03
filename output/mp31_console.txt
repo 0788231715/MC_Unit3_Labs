@@ -1,0 +1,29 @@
+NumPy 2.4.4 | Matplotlib 3.10.8 | Python 3.12.3
+
+Frequency reuse summary (Step 6)
+N    (i,j)   Q=sqrt(3N)   groups_in_layout   measured_D/R
+1    (1, 0)  1.732        1                  1.732
+3    (1, 1)  3.000        3                  3.000
+4    (2, 0)  3.464        4                  3.464
+7    (2, 1)  4.583        7                  4.583
+Configuration                              Handovers  Ping-pongs  Samples<-100dBm  MinServingRSRP(dBm)
+Naive (no margin, no timer)                13         11          0                -94.4
+Hysteresis only (3 dB)                     5          2           0                -97.1
+Hysteresis 3 dB + TTT 5 samples            1          0           0                -96.9
+
+[Lab task 1] N=9 and N=12 added
+N    (i,j)   Q=sqrt(3N)   groups_in_layout   measured_D/R
+7    (2, 1)  4.583        7                  4.583
+9    (3, 0)  5.196        9                  5.196
+12   (2, 2)  6.000        12                 6.000
+4    (2, 0)  3.464        4                  3.464
+
+[Lab task 2] strongest-of-three: [('Naive', 32, 22), ('Hyst 3 dB', 9, 4), ('Hyst 3 dB + TTT 5', 1, 0)]
+
+[Lab task 3] best feasible (margin, TTT, mean handovers, mean min RSRP): (7.0, 1.0, 1.0, -96.17)
+
+[Lab task 4] tuned (m=7.0, TTT=1) slow vs fast (handovers, minRSRP, samples<-100): {'slow': (np.float64(1.0666666666666667), np.float64(-97.02042687310644), np.float64(0.4666666666666667)), 'fast': (np.float64(1.3333333333333333), np.float64(-98.07625616690959), np.float64(3.8))}
+
+[Lab task 5] bias toward B (dB, handovers, first handover time): [(0.0, 1, 154), (2.0, 1, 134), (4.0, 1, 134), (6.0, 1, 130)]
+
+[Lab task 6] first-tier interferers: omni = 6, 120-deg sectors ~ 2 (see report)

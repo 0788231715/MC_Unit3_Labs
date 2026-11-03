@@ -1,0 +1,21 @@
+Transition log - policy: Naive
+  t(s)  from          to            cell  trigger
+--------------------------------------------------------------------------------------------------------------
+  0.00  IDLE          RA_PREAMBLE   A     cell A selected (-87.7 dBm); Msg1 preamble sent
+  0.25  RA_PREAMBLE   RA_PREAMBLE   A     no RAR - power ramp, retry #2
+  0.50  RA_PREAMBLE   RA_RAR        A     Msg2 RAR received: timing advance + UL grant + temp-ID
+  0.75  RA_RAR        RA_MSG3       A     Msg3 RRC Connection Request sent with UE identity
+  1.00  RA_MSG3       RA_CONTENTION A     waiting for Msg4 contention resolution
+  1.25  RA_CONTENTION CONNECTED     A     Msg4 echoes UE identity - contention resolved
+ 24.00  CONNECTED     HANDOVER      A     Naive: B -103.8 vs A -107.8 dBm -> HO command
+ 24.50  HANDOVER      CONNECTED     B     contention-free RACH to B done (dedicated preamble, TA applied)
+ 26.50  CONNECTED     HANDOVER      B     Naive: A -105.2 vs B -105.9 dBm -> HO command
+ 27.00  HANDOVER      CONNECTED     A     contention-free RACH to A done (dedicated preamble, TA applied)
+ 28.00  CONNECTED     HANDOVER      A     Naive: B -102.6 vs A -105.4 dBm -> HO command
+ 28.50  HANDOVER      CONNECTED     B     contention-free RACH to B done (dedicated preamble, TA applied)
+ 66.00  CONNECTED     HANDOVER      B     Naive: C -103.0 vs B -104.4 dBm -> HO command
+ 66.50  HANDOVER      CONNECTED     C     contention-free RACH to C done (dedicated preamble, TA applied)
+ 67.75  CONNECTED     HANDOVER      C     Naive: B -106.5 vs C -107.9 dBm -> HO command
+ 68.25  HANDOVER      CONNECTED     B     contention-free RACH to B done (dedicated preamble, TA applied)
+ 68.50  CONNECTED     HANDOVER      B     Naive: C -108.9 vs B -109.7 dBm -> HO command
+ 69.00  HANDOVER      CONNECTED     C     contention-free RACH to C done (dedicated preamble, TA applied)

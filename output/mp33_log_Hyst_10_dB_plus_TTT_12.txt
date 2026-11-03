@@ -1,0 +1,21 @@
+Transition log - policy: Hyst 10 dB + TTT 12
+  t(s)  from          to            cell  trigger
+--------------------------------------------------------------------------------------------------------------
+  0.00  IDLE          RA_PREAMBLE   A     cell A selected (-87.7 dBm); Msg1 preamble sent
+  0.25  RA_PREAMBLE   RA_PREAMBLE   A     no RAR - power ramp, retry #2
+  0.50  RA_PREAMBLE   RA_RAR        A     Msg2 RAR received: timing advance + UL grant + temp-ID
+  0.75  RA_RAR        RA_MSG3       A     Msg3 RRC Connection Request sent with UE identity
+  1.00  RA_MSG3       RA_CONTENTION A     waiting for Msg4 contention resolution
+  1.25  RA_CONTENTION CONNECTED     A     Msg4 echoes UE identity - contention resolved
+ 34.25  CONNECTED     HANDOVER      A     Hyst 10 dB + TTT 12: B -95.8 vs A -108.2 dBm -> HO command
+ 34.75  HANDOVER      CONNECTED     B     contention-free RACH to B done (dedicated preamble, TA applied)
+ 74.75  CONNECTED     IDLE          None  RLF: serving B -114.2 dBm < -112.0 for 3 samples
+ 76.00  IDLE          RA_PREAMBLE   C     cell C selected (-98.0 dBm); Msg1 preamble sent
+ 76.25  RA_PREAMBLE   RA_RAR        C     Msg2 RAR received: timing advance + UL grant + temp-ID
+ 76.50  RA_RAR        RA_MSG3       C     Msg3 RRC Connection Request sent with UE identity
+ 76.75  RA_MSG3       RA_CONTENTION C     waiting for Msg4 contention resolution
+ 77.00  RA_CONTENTION RA_PREAMBLE   C     contention lost (identity mismatch) - new preamble
+ 77.25  RA_PREAMBLE   RA_RAR        C     Msg2 RAR received: timing advance + UL grant + temp-ID
+ 77.50  RA_RAR        RA_MSG3       C     Msg3 RRC Connection Request sent with UE identity
+ 77.75  RA_MSG3       RA_CONTENTION C     waiting for Msg4 contention resolution
+ 78.00  RA_CONTENTION CONNECTED     C     Msg4 echoes UE identity - contention resolved

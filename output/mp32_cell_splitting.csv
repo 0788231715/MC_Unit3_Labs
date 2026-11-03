@@ -1,0 +1,4 @@
+N,total_channels,channels_per_cell,cells,capacity_channels,capacity_users,Q,SIR_dB,R,sectors,power_reduction_dB,gain_vs_base
+7,125,17,15.396,261.732,2093.857,4.583,18.663,5.0,1,0.0,1.0
+7,125,17,61.584,1046.928,8375.428,4.583,18.663,2.5,1,12.041,4.0
+7,125,17,246.336,4187.714,33501.712,4.583,18.663,1.25,1,24.082,16.0

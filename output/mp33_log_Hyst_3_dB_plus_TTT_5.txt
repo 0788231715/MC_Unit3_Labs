@@ -1,0 +1,13 @@
+Transition log - policy: Hyst 3 dB + TTT 5
+  t(s)  from          to            cell  trigger
+--------------------------------------------------------------------------------------------------------------
+  0.00  IDLE          RA_PREAMBLE   A     cell A selected (-87.7 dBm); Msg1 preamble sent
+  0.25  RA_PREAMBLE   RA_PREAMBLE   A     no RAR - power ramp, retry #2
+  0.50  RA_PREAMBLE   RA_RAR        A     Msg2 RAR received: timing advance + UL grant + temp-ID
+  0.75  RA_RAR        RA_MSG3       A     Msg3 RRC Connection Request sent with UE identity
+  1.00  RA_MSG3       RA_CONTENTION A     waiting for Msg4 contention resolution
+  1.25  RA_CONTENTION CONNECTED     A     Msg4 echoes UE identity - contention resolved
+ 26.25  CONNECTED     HANDOVER      A     Hyst 3 dB + TTT 5: B -103.8 vs A -107.1 dBm -> HO command
+ 26.75  HANDOVER      CONNECTED     B     contention-free RACH to B done (dedicated preamble, TA applied)
+ 70.00  CONNECTED     HANDOVER      B     Hyst 3 dB + TTT 5: C -104.1 vs B -108.9 dBm -> HO command
+ 70.50  HANDOVER      CONNECTED     C     contention-free RACH to C done (dedicated preamble, TA applied)

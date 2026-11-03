@@ -1,0 +1,4 @@
+Configuration                              Handovers  Ping-pongs  Samples<-100dBm  MinServingRSRP(dBm)
+Naive (no margin, no timer)                13         11          0                -94.4
+Hysteresis only (3 dB)                     5          2           0                -97.1
+Hysteresis 3 dB + TTT 5 samples            1          0           0                -96.9
